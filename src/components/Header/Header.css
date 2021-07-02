@@ -1,0 +1,20 @@
+.header-wrapper{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+}
+.header-option{
+    width: 300px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 100%;
+    line-height: 50px;
+}
+.header-option:hover{
+    background-color: #fff;
+    border-radius: 16px 16px 0 0;
+}
