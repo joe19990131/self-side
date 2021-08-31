@@ -1,0 +1,107 @@
+.editor{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    border-radius: 8px;
+    margin: 10px;
+    padding-bottom: 10px;  
+    width: calc(100% - 20px);
+    background-color: #fff;
+}
+
+.edit-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    
+}
+
+.input-block{
+    padding:12px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+}
+
+.input-title{
+    color: #2c2c2c;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input-block>input{
+    width: calc(100% - 8px);
+    height: 32px;
+    padding: 1px 2px ;
+    line-height: 24px;
+    border-radius: 4px;
+    border: 1px #666666 solid;
+    background-color: #fff;
+}
+
+.input-block>textarea{
+    padding: 1px 2px ;
+    min-width: calc(100% - 8px);
+    max-width: calc(100% - 8px);
+    line-height: 16px;
+    font-size: 16px;
+    
+    border-radius: 4px;
+    border: 1px #666666 solid;
+    height: 120px;
+}
+
+.btn-area{
+    padding: 4px 8px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;    
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+    margin-left: 6px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    background-color: lightslategray;
+    color: white;
+    
+}
+
+.btn-submit{
+    background-color: #32CD32;
+    cursor: pointer;
+}
+
+.btn-submit:hover{
+    background-color: white;
+    color: #32CD32;
+    border: 2px #32CD32 solid;
+    line-height: 36px;
+    height: 36px;
+    width: 76px;
+}
+
+.btn-clean{
+    color: #2c2c2c;
+    height: 38px;
+    line-height: 38px;
+    border: 1px #2c2c2c solid;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-clean:hover{
+    color: white;
+    background-color: #2c2c2c;
+}
