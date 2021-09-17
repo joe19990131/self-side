@@ -1,6 +1,6 @@
 import './css/noteEdit.css'
 import { useState } from 'react'
-const NoteEdit = ({addData}) => {
+const NoteEdit = ({addData,closeNotePanel}) => {
     
     const [title,setTitle] = useState('')
     function titleChange(e){
@@ -22,11 +22,8 @@ const NoteEdit = ({addData}) => {
         setNote(e.target.value)
     }
 
-    function clean(){
-        setTitle('')
-        setDate('')
-        setTime('')
-        setNote('')
+    function close(){
+        closeNotePanel()
     }
 
     function addNote(){
@@ -58,7 +55,7 @@ const NoteEdit = ({addData}) => {
             </div>
         </div>
         <div className = "btn-area">
-            <div className = "btn btn-clean" onClick={clean}>clean</div>
+            <div className = "btn btn-clean" onClick={close}>close</div>
             <div className = "btn btn-submit" onClick={addNote}>add</div>
         </div>
     </div>

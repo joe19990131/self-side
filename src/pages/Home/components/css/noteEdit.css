@@ -3,12 +3,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
-
+    box-shadow: 4px 0 8px #0000005b;
     border-radius: 8px;
     margin: 10px;
     padding-bottom: 10px;  
     width: calc(100% - 20px);
+    max-width: 1060px;
     background-color: #fff;
+    align-self: center;
 }
 
 .edit-area{

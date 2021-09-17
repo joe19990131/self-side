@@ -11,19 +11,23 @@ const Home = () => {
         setData(prev => [...prev, data])
     }
     function addNoteOnClick(){
-        setEditPopupVisable(prev=>prev?false:true)
+        setEditPopupVisable(true)
+    }
+    function closeNotePanel(){
+        setEditPopupVisable(false)
     }
 
     return <div className="home">
-
-        <div className="lists">
-            <span style={{ display: listData.length === 0 ? 'block' : 'none' }}>Write Notes!</span>
+        <div className="mask" style={{display:editPopupVisable?'block':'none'}}></div>
+        
+        <div className="lists" >
+        <span className='empty-tip' style={{ display: listData.length === 0 ? 'block' : 'none' }}>Write Notes!</span>
             {listData.map(item => <List data={item} key={uuidv4()} />)}
         </div>
         <div className='edit-popup'　style={{display:editPopupVisable?'flex':'none'}}>
-            <NoteEdit addData={addData} />
+            <NoteEdit addData={addData} closeNotePanel={closeNotePanel}/>
         </div>
-        <div className='add-note-btn' onClick={addNoteOnClick}>{editPopupVisable?'ｘ':'+'}</div>
+        <div className='add-note-btn' onClick={addNoteOnClick} style={{display:editPopupVisable?'none':'block'}}>+</div>
 
     </div>
 }
